@@ -1,6 +1,6 @@
 # tvbuddy
 
-Aggregate real-time market data from cryptocurrency exchanges, filter, sort and finally format into TradingView's watchlist syntax!
+Aggregate real-time market data from cryptocurrency exchanges, filter, sort and finally format as TradingView watchlists.
 
 Developed and tested on Python 3.10.
 

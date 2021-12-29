@@ -19,7 +19,7 @@ if not name:
     st.error("Please select a name.")
     st.stop()
 
-aggregator = st.radio("Aggregators", options=("FTX",))
+aggregator = st.radio("Aggregators", options=("FTX", "Binance"))
 if not aggregator:
     st.error("Please select atleast one aggregator.")
     st.stop()

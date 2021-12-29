@@ -29,7 +29,7 @@ if not sort_by:
     st.error("Please select a sorting algorithm.")
     st.stop()
 
-filtering = st.checkbox("Filtering")
+filtering = st.checkbox("Filters")
 
 valid_volume = None
 valid_price = None
@@ -44,7 +44,7 @@ if filtering:
         only_perpetuals = st.checkbox("Only perpetuals")
 
     custom_filter_expression = st.text_input(
-        "Custom filter expression", placeholder="...")
+        "Custom expression", placeholder="...")
 
 
 def export():

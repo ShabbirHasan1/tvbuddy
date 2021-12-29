@@ -1,12 +1,15 @@
 # tvbuddy
-
 Aggregate real-time market data from cryptocurrency exchanges, filter, sort and format as TradingView watchlists.
 
 Developed and tested on Python 3.10.
 
-Pull requests are wholeheartedly welcomed 💚!
+Pull requests are wholeheartedly welcomed 💚
 
-## Usage
+## Public instances
+* [tvbuddy.disguised.host](https://tvbuddy.disguised.host/)
+  Hosted by me, updated atleast once per day.
+
+## Setup
 Install the required Python dependencies
 
 `pip install -r requirements.txt`
@@ -15,7 +18,12 @@ run the [Streamlit](https://github.com/streamlit/streamlit) frontend server
 
 `python -m streamlit run ui.py`
 
-and lastly navigate to [localhost:8501](http://localhost:8501) and have a look!
+### Development
+Navigate to [localhost:8501](http://localhost:8501) and have a look!
+
+### Live
+How you want to deploy tvbuddy in a live environment is completely up to you,
+personally I use [Caddy](https://caddyserver.com/) as a reverse proxy.
 
 ## Roadmap
 

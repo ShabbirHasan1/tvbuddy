@@ -1,6 +1,7 @@
 import streamlit as st
 
 from internal.aggregator_factory import Aggregators
+from internal.sorting import SortingMethods
 
 from internal.aggregator_wrapper import get_tv_formatted_markets
 
@@ -17,13 +18,14 @@ if not name:
     st.warning("Please enter a name.")
     st.stop()
 
-# ("FTX", "Binance", "Kucoin", "Bitfinex")
-aggregators = st.multiselect("Aggregators", options=list(Aggregators))
+aggregators = st.multiselect("Aggregators", options=[
+                             aggregator.value for aggregator in Aggregators])
 if not aggregators:
     st.warning("Please select atleast one aggregator.")
     st.stop()
 
-sort_by = st.radio("Sort by", options=("Nothing", "Price", "Volume (24h)"))
+sort_by = st.radio("Sort by", options=[
+                   sorting_method.value for sorting_method in SortingMethods])
 if not sort_by:
     st.warning("Please select a sorting method.")
     st.stop()

@@ -1,5 +1,7 @@
 import streamlit as st
 
+from internal.aggregator_factory import Aggregators
+
 from internal.aggregator_wrapper import get_tv_formatted_markets
 
 st.set_page_config(
@@ -15,8 +17,8 @@ if not name:
     st.warning("Please enter a name.")
     st.stop()
 
-aggregators = st.multiselect("Aggregators", options=(
-    "FTX", "Binance", "Kucoin", "Bitfinex"))
+# ("FTX", "Binance", "Kucoin", "Bitfinex")
+aggregators = st.multiselect("Aggregators", options=list(Aggregators))
 if not aggregators:
     st.warning("Please select atleast one aggregator.")
     st.stop()

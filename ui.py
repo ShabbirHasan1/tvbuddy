@@ -20,7 +20,7 @@ if not name:
     st.warning("Please enter a name.")
     st.stop()
 
-aggregators = st.multiselect("Aggregators", options=("FTX", "Binance"))
+aggregators = st.multiselect("Aggregators", options=("FTX", "Binance", "Kucoin"))
 if not aggregators:
     st.warning("Please select atleast one aggregator.")
     st.stop()

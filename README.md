@@ -23,7 +23,7 @@ should be done before a first release.
 - [x] It works! Basic proof of concept
 - [ ] Implement other aggregators, in no particular order
   - [x] Binance
-  - [ ] Kucoin
+  - [x] Kucoin
   - [ ] Bybit
   - [ ] Bitfinex
   - [ ] Huobi

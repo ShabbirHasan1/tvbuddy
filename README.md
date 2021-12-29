@@ -3,11 +3,11 @@ Aggregate real-time market data from cryptocurrency exchanges, filter, sort and 
 
 Developed and tested on Python 3.10.
 
-Pull requests are wholeheartedly welcomed 💚
-
 ## Public instances
 * [tvbuddy.disguised.host](https://tvbuddy.disguised.host/)
   Hosted by me, updated atleast once per day.
+
+If you're hosting a public tvbuddy instance feel free to make a pull request adding it to the list!
 
 ## Setup
 Install the required Python dependencies

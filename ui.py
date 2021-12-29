@@ -1,9 +1,10 @@
 import streamlit as st
 
-from internal.aggregator import AggregatorFactory, Aggregators
+from internal.aggregator_factory import AggregatorFactory
+
 from internal.filtering import filter_custom, filter_perpetuals, filter_price, filter_volume
-from internal.formatting import format_markets
 from internal.sorting import sort_markets
+from internal.formatting import format_markets
 
 st.set_page_config(
     page_title="tvbuddy",

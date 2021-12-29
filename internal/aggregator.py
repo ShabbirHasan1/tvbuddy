@@ -1,8 +1,3 @@
-from enum import Enum
-
-import requests
-from requests.exceptions import HTTPError
-
 MARKET_CHILDREN_SCHEMA = [
     {
         "name": "price",
@@ -44,44 +39,3 @@ class Aggregator:
 
     def get_tv_prefix(self):
         pass
-
-
-class FtxAggregator(Aggregator):
-    def get_markets_raw(self):
-        response = requests.get("https://ftx.com/api/markets")
-        response = response.json()
-
-        if not response["success"]:
-            raise RuntimeError("Invalid response from 'https://ftx.com/api/markets'!")
-
-        return response["result"]
-
-    def normalize(self, markets):
-        normalized_markets = []
-
-        for market in markets:
-            normalized_markets.append({
-                "name": market["name"],
-                "price": market["price"],
-                "usd_volume": market["volumeUsd24h"]
-            })
-
-        return normalized_markets
-
-    def get_tv_prefix(self):
-        return "FTX"
-
-
-class Aggregators(Enum):
-    ftx = "FTX"
-
-    def __str__(self):
-        return self.value
-
-
-class AggregatorFactory:
-    def create(aggregator):
-        if aggregator == str(Aggregators.ftx):
-            return FtxAggregator()
-
-        raise RuntimeError(f"Invalid aggregator '{aggregator}'")

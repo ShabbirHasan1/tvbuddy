@@ -4,6 +4,8 @@ Aggregate real-time market data from cryptocurrency exchanges, filter, sort and 
 
 Developed and tested on Python 3.10.
 
+Pull requests are wholeheartedly welcomed 💚!
+
 ## Usage
 Install the required Python dependencies
 

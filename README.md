@@ -14,7 +14,7 @@ Install the required Python dependencies
 
 `pip install -r requirements.txt`
 
-run the [Streamlit](https://github.com/streamlit/streamlit) frontend server
+and run the [Streamlit](https://github.com/streamlit/streamlit) server
 
 `python -m streamlit run ui.py`
 

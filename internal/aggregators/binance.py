@@ -26,7 +26,7 @@ class BinanceAggregator(Aggregator):
             normalized_markets.append({
                 "name": market["symbol"],
                 "price": market["price"],
-                "quote_volume": market["volume"] * market["price"]
+                "quote_volume": market["volume"]
             })
 
         return normalized_markets

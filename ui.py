@@ -16,17 +16,17 @@ name = st.text_input("Name", placeholder="...")
 name_with_extension = name if name.endswith(".txt") else name + ".txt"
 
 if not name:
-    st.error("Please select a name.")
+    st.error("Please enter a name.")
     st.stop()
 
 aggregator = st.radio("Aggregators", options=("FTX", "Binance"))
 if not aggregator:
-    st.error("Please select atleast one aggregator.")
+    st.error("Please select an aggregator.")
     st.stop()
 
 sort_by = st.radio("Sort by", options=("Nothing", "Price", "Volume (24h)"))
 if not sort_by:
-    st.error("Please select a sorting algorithm.")
+    st.error("Please select a sorting method.")
     st.stop()
 
 filtering = st.checkbox("Filters")

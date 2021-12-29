@@ -17,7 +17,8 @@ and lastly navigate to [localhost:8501](http://localhost:8501) and have a look!
 
 ## Roadmap
 
-As of writing this the code is, well.. Pretty terrible. There's lots of things 
+As of writing this the code is, well.. Pretty terrible. There's lots of things that
+should be done before a first release.
 
 - [x] It works! Basic proof of concept
 - [ ] Implement other aggregators

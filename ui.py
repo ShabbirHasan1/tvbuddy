@@ -49,7 +49,6 @@ if filtering:
 def export():
     aggregator_instance = AggregatorFactory.create(aggregator)
     markets = aggregator_instance.get_markets()
-    markets = aggregator_instance.normalize(markets)
 
     if valid_volume:
         markets = filter_volume(markets)

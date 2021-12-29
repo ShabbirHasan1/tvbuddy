@@ -16,7 +16,7 @@ def filter_custom(markets, expression):
 
 
 def filter_volume(markets):
-    return filter_markets(markets, lambda market: market["usd_volume"] > 0)
+    return filter_markets(markets, lambda market: market["quote_volume"] > 0)
 
 
 def filter_price(markets):

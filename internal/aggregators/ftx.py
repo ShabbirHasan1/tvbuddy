@@ -21,7 +21,7 @@ class FtxAggregator(Aggregator):
             normalized_markets.append({
                 "name": market["name"],
                 "price": market["price"],
-                "usd_volume": market["volumeUsd24h"]
+                "quote_volume": market["quoteVolume24h"]
             })
 
         return normalized_markets

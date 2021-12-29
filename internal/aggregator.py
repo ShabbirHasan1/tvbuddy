@@ -4,7 +4,7 @@ MARKET_CHILDREN_SCHEMA = [
         "default": 0
     },
     {
-        "name": "usd_volume",
+        "name": "quote_volume",
         "default": 0
     }
 ]

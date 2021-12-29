@@ -3,7 +3,7 @@ def by_price(markets):
 
 
 def by_volume(markets):
-    return sorted(markets, key=lambda market: market["usd_volume"], reverse=True)
+    return sorted(markets, key=lambda market: market["quote_volume"], reverse=True)
 
 
 def sort_markets(markets, algorithm):

@@ -1,11 +1,6 @@
 import streamlit as st
 
-from internal.aggregator_factory import AggregatorFactory
 from internal.aggregator_wrapper import get_tv_formatted_markets
-
-from internal.filtering import filter_custom, filter_perpetuals, filter_price, filter_volume
-from internal.sorting import sort_markets
-from internal.formatting import format_markets
 
 st.set_page_config(
     page_title="tvbuddy",
@@ -20,7 +15,7 @@ if not name:
     st.warning("Please enter a name.")
     st.stop()
 
-aggregators = st.multiselect("Aggregators", options=("FTX", "Binance", "Kucoin"))
+aggregators = st.multiselect("Aggregators", options=("FTX", "Binance", "Kucoin", "Bitfinex"))
 if not aggregators:
     st.warning("Please select atleast one aggregator.")
     st.stop()

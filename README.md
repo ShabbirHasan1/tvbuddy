@@ -25,7 +25,7 @@ should be done before a first release.
   - [x] Binance
   - [x] Kucoin
   - [ ] Bybit
-  - [ ] Bitfinex
+  - [x] Bitfinex
   - [ ] Huobi
   - [ ] Coinbase
   - [ ] Kraken

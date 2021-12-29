@@ -15,7 +15,8 @@ if not name:
     st.warning("Please enter a name.")
     st.stop()
 
-aggregators = st.multiselect("Aggregators", options=("FTX", "Binance", "Kucoin", "Bitfinex"))
+aggregators = st.multiselect("Aggregators", options=(
+    "FTX", "Binance", "Kucoin", "Bitfinex"))
 if not aggregators:
     st.warning("Please select atleast one aggregator.")
     st.stop()
@@ -43,19 +44,20 @@ if filtering:
         "Custom expression", placeholder="...")
 
 
-def export():
-    tv_formatted_markets = get_tv_formatted_markets(
+@st.cache()
+def get_data(aggregators, valid_volume, valid_price, only_perpetuals, custom_filter_expression, sort_by):
+    return get_tv_formatted_markets(
         aggregators, valid_volume, valid_price, only_perpetuals, custom_filter_expression, sort_by)
 
-    if tv_formatted_markets.count(",") > 1000:
-        st.error("Collected markets exceed 1000!")
-        st.stop()
 
-    return tv_formatted_markets
-
+data = get_data(aggregators, valid_volume, valid_price,
+                only_perpetuals, custom_filter_expression, sort_by)
+if data.count(",") > 1000:
+    st.error("Filtered market count exceeds TradingView watchlist limit!")
+    st.stop()
 
 st.download_button(
     f"Download '{name_with_extension}'",
-    data=export(),
+    data=data,
     file_name=name_with_extension
 )

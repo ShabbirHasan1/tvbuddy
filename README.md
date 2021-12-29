@@ -21,7 +21,14 @@ As of writing this the code is, well.. Pretty terrible. There's lots of things t
 should be done before a first release.
 
 - [x] It works! Basic proof of concept
-- [ ] Implement other aggregators
+- [ ] Implement other aggregators, in no particular order
+  - [x] Binance
+  - [ ] Kucoin
+  - [ ] Bybit
+  - [ ] Bitfinex
+  - [ ] Huobi
+  - [ ] Coinbase
+  - [ ] Kraken
 - [ ] Refactor code.. A ton of refactoring
-- [ ] Abstractions, abstractions, abstractions. Rewriting code is tedious. 
+- [ ] Abstractions, abstractions, abstractions. Rewriting code is tedious
 - [ ] Improve sorting and filtering.
